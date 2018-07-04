@@ -1,0 +1,10 @@
+version: "3"
+services:
+  mgdb:
+    image: mvertes/alpine-mongo
+    # name: mongo
+    volumes:
+      - "./data:/data/db"
+    restart: always
+    ports:
+      - 27017:27017
