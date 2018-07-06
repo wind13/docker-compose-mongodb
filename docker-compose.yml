@@ -2,9 +2,9 @@ version: "3"
 services:
   mgdb:
     image: mvertes/alpine-mongo
-    # name: mongo
     volumes:
       - "./data:/data/db"
     restart: always
+    command: [ "mongod", "--bind_ip", "0.0.0.0", "--auth" ]
     ports:
       - 27017:27017
