@@ -4,6 +4,7 @@ services:
     image: mvertes/alpine-mongo
     volumes:
       - "./data:/data/db"
+      - "./dump:/data/dump"
     restart: always
     command: [ "mongod", "--bind_ip", "0.0.0.0", "--auth" ]
     ports:
